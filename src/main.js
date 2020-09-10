@@ -12,8 +12,8 @@ Vue.use(VueRouter);
 // 引入路由
 import router from './router';
 // 自定义全局工具
-import './shared/utils/router-jump.ultis';
-import './shared/utils/automatic-logon-component.utils';
+import './shared/utils/router-jump.util';
+import './shared/utils/automatic-logon-component.util';
 
 
 

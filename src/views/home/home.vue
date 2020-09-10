@@ -1,7 +1,14 @@
+<!--
+ * @file: 
+ * @Date: 2020-09-10 21:54:18
+ * @author: manyao.zhu
+-->
 <template>
-  <div>
+  <div class='home'>
     <Header></Header>
-    {{ home }}
+    <span class="test">
+      {{ home }}
+    </span>
     <Footer></Footer>
     <base-table :name="home"></base-table>
   </div>
@@ -17,4 +24,11 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped lang='scss'>
+@import '../../assets/css/shared';
+  .home {
+    .test {
+      color: $color;
+    }
+  }
+</style>
