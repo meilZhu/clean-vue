@@ -3,23 +3,23 @@
  * @Date: 2020-09-04 14:00:37
  * @author: manyao.zhu
  */
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from "vue";
+import App from "./App.vue";
 
-import VueRouter from 'vue-router';
+import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 // 引入路由
-import router from './router';
+import router from "./router";
+import store from "./store";
 // 自定义全局工具
-import './shared/utils/router-jump.util';
-import './shared/utils/automatic-logon-component.util';
+import "./shared/utils/router-jump.util";
+import "./shared/utils/automatic-logon-component.util";
 
-
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: h => h(App),
-}).$mount('#app')
+  store,
+  render: (h) => h(App),
+}).$mount("#app");

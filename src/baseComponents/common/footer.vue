@@ -4,10 +4,16 @@
  * @author: manyao.zhu
 -->
 <template>
-  <div>{{ title }}</div>
+  <div>
+    {{ title }}
+    <span>{{ supplierTitle }}</span>
+    <div>{{ name }}</div>
+  </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "base-footer",
   data() {
@@ -17,6 +23,20 @@ export default {
   },
   created() {},
   mounted() {},
+  // computed: mapState({
+  //   // supplierTitle(state) {
+  //   //   return state.supplier.title;
+  //   // },
+  //   // supplierTitle: (state) => state.supplier.title,
+  // }),
+  computed: {
+    supplierTitle() {
+      return this.$store.state.supplier.title;
+    },
+    ...mapState({
+      name: (state) => state.supplier.title,
+    }),
+  },
   methods: {},
 };
 </script>

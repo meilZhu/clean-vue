@@ -4,10 +4,15 @@
  * @author: manyao.zhu
 -->
 <template>
-  <div>{{ title }}</div>
+  <div>
+    {{ title }}
+
+    <button @click="changeDate">改变值</button>
+  </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "base-header",
   data() {
@@ -17,7 +22,27 @@ export default {
   },
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    ...mapActions({
+      setName: "supplier/setName",
+    }),
+    changeDate() {
+      console.log(this);
+      console.log(1);
+      // this.$store.dispatch("supplier/setName", {
+      //   title: "李四",
+      //   cb: () => {
+      //     console.log("将张三改为李四");
+      //   },
+      // });
+      this.setName({
+        title: "李四",
+        cb: () => {
+          console.log("jiang张三改为李四");
+        },
+      });
+    },
+  },
 };
 </script>
 <style scoped lang="scss"></style>
