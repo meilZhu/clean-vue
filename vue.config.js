@@ -4,30 +4,34 @@
  * @author: manyao.zhu
  */
 
-const devTarget = '';
-const testTarget = '';
-const prodTarget = '';
-const target = process.env.NODE_ENV === 'production' ? prodTarget : process.env.NODE_ENV === 'testing' ? testTarget: devTarget;
+const devTarget = "";
+const testTarget = "";
+const prodTarget = "";
+const target =
+  process.env.NODE_ENV === "production"
+    ? prodTarget
+    : process.env.NODE_ENV === "testing"
+    ? testTarget
+    : devTarget;
 
 module.exports = {
-    // publicPath: '/',
-    // outputDir: 'dist',
-    // assetsDir: 'static',
-    // indexPath: 'index.html',
-    // filenameHashing: true,
-    // lintOnSave: process.env.NODE_ENV !== 'production',
-    // productionSourceMap: false,
-    // devServer: {
-    //     host: 'localhost',
-    //     port: '8989',
-    //     https: false,
-    //     proxy: [
-    //         {
-    //             context: ['/api'],
-    //             target,
-    //             changeOrigin: true,
-    //             pathRewrite: {}
-    //         }
-    //     ]
-    // }
-}
+  publicPath: "/",
+  outputDir: "dist",
+  assetsDir: "static",
+  indexPath: "index.html",
+  filenameHashing: true,
+  lintOnSave: process.env.NODE_ENV !== "production",
+  productionSourceMap: false,
+  devServer: {
+    host: "localhost",
+    port: "8989",
+    https: false,
+    // proxy: {
+    //   "/api": {
+    //     target,
+    //     changeOrigin: true,
+    //   },
+    // },
+    proxy: null,
+  },
+};

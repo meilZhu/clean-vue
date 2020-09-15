@@ -9,6 +9,11 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
+// ant-design-vue 的全局引入
+// import Antd from "ant-design-vue";
+// import "ant-design-vue/dist/antd.min.css";
+// Vue.use(Antd);
+
 // 引入路由
 import router from "./router";
 import store from "./store";
