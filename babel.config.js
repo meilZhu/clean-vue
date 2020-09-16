@@ -4,5 +4,12 @@
  * @author: manyao.zhu
  */
 module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
+  presets: ["@vue/cli-plugin-babel/preset"], // "@vue/app"
+  plugins: [
+    [
+      "import",
+      // { libraryName: "ant-design-vue", libraryDirectory: "es", style: true }, // 这个是按需加载
+      { libraryName: "Antd", libraryDirectory: "es", style: true }, // 全局加载
+    ],
+  ],
 };
