@@ -4,6 +4,8 @@
  * @author: manyao.zhu
  */
 
+const path = require("path");
+
 const devTarget = "";
 const testTarget = "";
 const prodTarget = "";
@@ -33,5 +35,25 @@ module.exports = {
     //   },
     // },
     proxy: null,
+  },
+  css: {
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            "primary-color": "orange",
+            "link-color": "#1DA57A",
+            "border-radius-base": "2px",
+          },
+          javascriptEnabled: true,
+        },
+      },
+    },
+  },
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "less",
+      patterns: [path.resolve(__dirname, "./src/assets/css/theme.less")],
+    },
   },
 };

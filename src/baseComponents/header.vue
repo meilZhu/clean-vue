@@ -6,19 +6,13 @@
 <template>
   <div>
     {{ title }}
-
     <button @click="changeDate">改变值</button>
-    <a-button type="primary" @click="changeDate">
-      Primary
-    </a-button>
+    <a-button type="primary" @click="changeDate">Primary</a-button>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
 import { mapActions } from "vuex";
-import { Button } from "ant-design-vue";
-Vue.use(Button);
 export default {
   name: "base-header",
   data() {
@@ -34,6 +28,7 @@ export default {
     }),
     changeDate() {
       console.log(this);
+      this.$message.success("成功过");
       console.log(1);
       // this.$store.dispatch("supplier/setName", {
       //   title: "李四",
