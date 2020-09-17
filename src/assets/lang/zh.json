@@ -1,0 +1,8 @@
+{
+  "operations": {
+    "add": "新增 | 新增成功 | 新增失败",
+    "exchange": "切换{name} | 切换成功 | 切换失败"
+  },
+  "projectName": "深迪科技",
+  "footerDesc": "描述 {name}"
+}

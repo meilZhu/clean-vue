@@ -1,0 +1,8 @@
+{
+  "operations": {
+    "add": "Add | Added successfully | Failed to add",
+    "exchange": "Switch{name} | Switch succeeded | Switch failed"
+  },
+  "projectName": "Shendi Technology",
+  "footerDesc": "description {name}"
+}

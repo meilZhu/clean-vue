@@ -4,11 +4,12 @@
  * @author: manyao.zhu
 -->
 <template>
-  <div class='home'>
+  <div class="home">
     <Header></Header>
     <span class="test">
       {{ home }}
     </span>
+    <Language></Language>
     <Footer></Footer>
     <base-table :name="home"></base-table>
   </div>
@@ -24,11 +25,11 @@ export default {
   },
 };
 </script>
-<style scoped lang='scss'>
-@import '../../assets/css/shared';
-  .home {
-    .test {
-      color: $color;
-    }
+<style scoped lang="scss">
+@import "../../assets/css/shared";
+.home {
+  .test {
+    color: $color;
   }
+}
 </style>

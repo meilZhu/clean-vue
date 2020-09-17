@@ -7,7 +7,13 @@
   <div>
     {{ title }}
     <button @click="changeDate">改变值</button>
+    <p>{{ $tc("operations.add", 0) }}</p>
+    <p>{{ $tc("operations.add", 1) }}</p>
+    <p>{{ $tc("operations.add", 2) }}</p>
     <a-button type="primary" @click="changeDate">Primary</a-button>
+    <a-date-picker @change="onChange($event)" />
+
+    <input type="text" v-model="text" />
   </div>
 </template>
 
@@ -18,6 +24,7 @@ export default {
   data() {
     return {
       title: "头部",
+      text: 122,
     };
   },
   created() {},
@@ -42,6 +49,10 @@ export default {
           console.log("jiang张三改为李四");
         },
       });
+    },
+    onChange(date) {
+      console.log("change");
+      console.log(date);
     },
   },
 };

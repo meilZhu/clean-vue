@@ -8,6 +8,8 @@
     {{ title }}
     <span>{{ supplierTitle }}</span>
     <div>{{ name }}</div>
+    <span>{{ $t("projectName") }}</span> <br />
+    <span>{{ $t("footerDesc", { name: "哈哈哈哈" }) }}</span>
   </div>
 </template>
 
