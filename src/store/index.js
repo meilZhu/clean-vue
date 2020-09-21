@@ -11,7 +11,9 @@ import getter from "./getters";
 
 Vue.use(Vuex);
 
-const state = {};
+const state = {
+  token: "9bbb9fdb-8b50-43f5-8bd0-2e1f83c42f04",
+};
 
 const getters = {};
 

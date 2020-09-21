@@ -6,7 +6,7 @@
 
 const path = require("path");
 
-const devTarget = "";
+const devTarget = "http://srm.dev.ithinkdt.com";
 const testTarget = "";
 const prodTarget = "";
 const target =
@@ -28,13 +28,12 @@ module.exports = {
     host: "localhost",
     port: "8989",
     https: false,
-    // proxy: {
-    //   "/api": {
-    //     target,
-    //     changeOrigin: true,
-    //   },
-    // },
-    proxy: null,
+    proxy: {
+      "/api/v1": {
+        target,
+        changeOrigin: true,
+      },
+    },
   },
   css: {
     loaderOptions: {

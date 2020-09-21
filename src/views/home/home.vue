@@ -9,6 +9,7 @@
     <span class="test">
       {{ home }}
     </span>
+    <a-button type="primary" @click="request">请求接口</a-button>
     <Language></Language>
     <Footer></Footer>
     <base-table :name="home"></base-table>
@@ -16,12 +17,23 @@
 </template>
 
 <script>
+import { getUserPortal } from "../../shared/fetch/service/common.service";
 export default {
   name: "home",
   data() {
     return {
       home: "首页",
     };
+  },
+  methods: {
+    request() {
+      const params = {
+        appId: "SRM",
+      };
+      getUserPortal(params).then((res) => {
+        console.log("请求接口成功", res);
+      });
+    },
   },
 };
 </script>
