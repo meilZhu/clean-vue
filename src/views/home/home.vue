@@ -10,6 +10,7 @@
       {{ home }}
     </span>
     <a-button type="primary" @click="request">请求接口</a-button>
+    <div>{{ time | date("yyyy/MM/dd hh:mm") }}</div>
     <Language></Language>
     <Footer></Footer>
     <base-table :name="home"></base-table>
@@ -23,6 +24,7 @@ export default {
   data() {
     return {
       home: "首页",
+      time: new Date(),
     };
   },
   methods: {

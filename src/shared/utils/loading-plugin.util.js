@@ -5,4 +5,7 @@
  */
 import Vue from "vue";
 
-// ant-design的局部加载（使用到的组件）；
+// ant-design的局部加载（使用到的组件）
+
+// 管道——过滤器的全局引入
+import "../filter/date,filter";
